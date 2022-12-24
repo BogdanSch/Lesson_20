@@ -1,0 +1,7 @@
+SELECT * FROM products_sales WHERE product_sales=(SELECT  MAX(product_sales) FROM products_sales);
+SELECT SUM(product_price) AS TOTAL_PRICES FROM products_sales;
+
+SELECT * FROM products_sales ORDER BY product_name DESC;
+
+SELECT product_name, product_sales FROM products_sales WHERE product_sales > 20
+AND (product_sales > 15 AND product_sales < 500);
